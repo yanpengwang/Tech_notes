@@ -1,3 +1,5 @@
+(view with raw format)
+
 1. What's the use of do while(0) when we define a macro?
  
 http://stackoverflow.com/questions/154136/do-while-and-if-else-statements-in-c-c-macros
