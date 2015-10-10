@@ -20,7 +20,7 @@ make-kpkg
 make
 also refer to : http://blog.csdn.net/xin_yu_xin/article/details/42184899
 
-3. 
+3. refer to https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
 3.1 use variable argument list withinin function:
 	static int printf(const char *fmt, ...)
 	{
@@ -33,12 +33,21 @@ also refer to : http://blog.csdn.net/xin_yu_xin/article/details/42184899
 	    return i;
 	}
 	
-	3.2 use variable argument list in macro:
+3.2 use variable argument list in macro:
 	#define DEBUG(level, fmt...) do {               \
         if (g_debuglevel >= level) {               \
                 fprintf(stdout, fmt);		\
                 fflush(stdout);                 \
         }                                       \
 } while (0)
-refer to https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
+
+#define DEBUG(level, fmt, ...)						\
+	do {								\
+		FILE *fp = test->ofile? test->ofile : stdout;		\
+		if (test->verbose >= level) {				\
+			fprintf(fp, "Test: %15s:%-10s       " fmt,	\
+			test->major, test->minor, ## __VA_ARGS__);	\
+			fflush(stdout);					\
+		}							\
+	} while(0)
 	
