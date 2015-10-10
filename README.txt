@@ -19,3 +19,26 @@ make menuconfig
 make-kpkg
 make
 also refer to : http://blog.csdn.net/xin_yu_xin/article/details/42184899
+
+3. 
+3.1 use variable argument list withinin function:
+	static int printf(const char *fmt, ...)
+	{
+	    va_list args;
+	    int i;
+	 
+	    va_start(args, fmt);
+	    i=vsprintf(printbuf, fmt, args);
+	    va_end(args);
+	    return i;
+	}
+	
+	3.2 use variable argument list in macro:
+	#define DEBUG(level, fmt...) do {               \
+        if (g_debuglevel >= level) {               \
+                fprintf(stdout, fmt);		\
+                fflush(stdout);                 \
+        }                                       \
+} while (0)
+	https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
+	
