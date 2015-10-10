@@ -40,5 +40,5 @@ also refer to : http://blog.csdn.net/xin_yu_xin/article/details/42184899
                 fflush(stdout);                 \
         }                                       \
 } while (0)
-	https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
+refer to https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
 	
