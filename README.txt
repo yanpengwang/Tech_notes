@@ -51,3 +51,11 @@ also refer to : http://blog.csdn.net/xin_yu_xin/article/details/42184899
 		}							\
 	} while(0)
 	
+4. What's the difference between inline function vs macro?
+Inline replaces a call to a function with the body of the function, 
+however, inline is just a request to the compiler that could be ignored 
+(you could still pass some flags to the compiler to force inline or 
+use *always_inline* attribute with gcc).
+A macro on the other hand, is expanded by the preprocessor before compilation, 
+so it's just like text substitution, also macros are not type checked, 
+inline functions are.
