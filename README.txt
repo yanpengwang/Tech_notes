@@ -61,10 +61,10 @@ so it's just like text substitution, also macros are not type checked,
 inline functions are.
 
 5. From c file to exe file
-a. Preprocess: gcc -E  helloword.c -o helloword.i
-b. Compile: gcc -S helloword.i -o helloword.s
-c. Assemble: gcc -c helloword.s -o helloword.o
-d. Link:  gcc helloword.o -o helloword
+a. Preprocess: gcc -E  helloword.c -o helloword.i (cpp)
+b. Compile: gcc -S helloword.i -o helloword.s (cc1)
+c. Assemble: gcc -c helloword.s -o helloword.o (as)
+d. Link:  gcc helloword.o -o helloword (ld)
 e. Run: ./helloword
 Hello world
 
