@@ -59,3 +59,6 @@ use *always_inline* attribute with gcc).
 A macro on the other hand, is expanded by the preprocessor before compilation, 
 so it's just like text substitution, also macros are not type checked, 
 inline functions are.
+
+5. From c file to exe file
+a. Preprocess: 
