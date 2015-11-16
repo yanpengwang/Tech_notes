@@ -72,3 +72,5 @@ Hello world
 
 5. Write reentrant and thread-safe code
 http://www.cnblogs.com/safeking/archive/2007/03/09/668873.html
+
+6. http://stackoverflow.com/questions/12469836/how-to-write-system-calls-on-debian-ubuntu
