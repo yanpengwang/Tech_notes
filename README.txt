@@ -9,6 +9,8 @@ http://stackoverflow.com/questions/154136/do-while-and-if-else-statements-in-c-c
 mkdir 3.16.0-30-generic
 cd 3.16.0-30-generic
 sudo apt-get install dpkg-dev
+# 'dpkg -l  |grep linux-image' get current image version
+# 'make kernelversion' get src version
 apt-get source linux-image-$(uname -r) 
 sudo apt-get install build-essential
 sudo apt-get install kernel-package
