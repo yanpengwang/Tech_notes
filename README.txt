@@ -5,22 +5,28 @@
 http://stackoverflow.com/questions/154136/do-while-and-if-else-statements-in-c-c-macros
 
 2. How to build & install linux kernel?
- 
+---think pad E531, virtual box 5.0.10, ubuntu 14.04---
+
+sudo apt-get install dpkg-dev
+sudo apt-get install build-essential
+sudo apt-get install kernel-package 
+sudo apt-get install libncurses5 libncurses5-dev 
+
+# 'dpkg -l  |grep linux-image' get current image version
 mkdir 3.16.0-30-generic
 cd 3.16.0-30-generic
-sudo apt-get install dpkg-dev
-# 'dpkg -l  |grep linux-image' get current image version
-# 'make kernelversion' get src version
 apt-get source linux-image-$(uname -r) 
-sudo apt-get install build-essential
-sudo apt-get install kernel-package
-sudo apt-get build-dep linux-image-$(uname -r)  
+# 'make kernelversion' get src version
+sudo apt-get build-dep linux-image-$(uname -r) 
+
+cp /boot/config-XX  ./.config
 make oldconfig
-sudo apt-get install libncurses5 libncurses5-dev 
 make menuconfig  
-make-kpkg
+make-kpkg  --initrd --revision ypwang.001  --append-to-version -20151116  kernel_image
 make
-also refer to : http://blog.csdn.net/xin_yu_xin/article/details/42184899
+also refer to : 
+http://www.cnblogs.com/wwang/archive/2011/01/07/1929486.html
+http://blog.csdn.net/xin_yu_xin/article/details/42184899
 
 3. refer to https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
 3.1 use variable argument list withinin function:
