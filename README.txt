@@ -22,8 +22,9 @@ sudo apt-get build-dep linux-image-$(uname -r)
 cp /boot/config-XX  ./.config
 make oldconfig
 make menuconfig  
-make-kpkg  --initrd --revision ypwang.001  --append-to-version -20151116  kernel_image
-make
+make-kpkg  --initrd --revision 1116  --append-to-version -20151116  kernel_image
+install the kernel deb file, reboot
+
 also refer to : 
 http://www.cnblogs.com/wwang/archive/2011/01/07/1929486.html
 http://blog.csdn.net/xin_yu_xin/article/details/42184899
