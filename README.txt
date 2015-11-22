@@ -81,3 +81,8 @@ Hello world
 http://www.cnblogs.com/safeking/archive/2007/03/09/668873.html
 
 6. http://stackoverflow.com/questions/12469836/how-to-write-system-calls-on-debian-ubuntu
+
+7. macro container_of in linux kernel source code:
+#define container_of(ptr, type, member) ({    \
+     const typeof ( ((type *)0) ->member ) *__mptr = (ptr);    \
+     (type *)((char *)__mptr - offsetof(type, member));}) 
