@@ -86,3 +86,6 @@ http://www.cnblogs.com/safeking/archive/2007/03/09/668873.html
 #define container_of(ptr, type, member) ({    \
      const typeof ( ((type *)0) ->member ) *__mptr = (ptr);    \
      (type *)((char *)__mptr - offsetof(type, member));}) 
+
+8. Difference of sync/async, blocking/nonblocking
+http://blog.csdn.net/hguisu/article/details/7453390
