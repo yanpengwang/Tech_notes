@@ -89,3 +89,16 @@ http://www.cnblogs.com/safeking/archive/2007/03/09/668873.html
 
 8. Difference of sync/async, blocking/nonblocking
 http://blog.csdn.net/hguisu/article/details/7453390
+
+9. Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+The simplest python code of others, which I liked very much:
+    def removeDuplicateLetters(self, s):
+        rindex = {c: i for i, c in enumerate(s)}
+        result = ''
+        for i, c in enumerate(s):
+            if c not in result:
+                while c < result[-1:] and i < rindex[result[-1]]:
+                    result = result[:-1]
+                result += c
+        return result
+        
