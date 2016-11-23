@@ -111,7 +111,7 @@ set listsize <count>
 search <regexp>, reverse-search <regexp>
 info line <linenum>
 info line <filename:function>
-disassemble
+disassemble, disassemble func
 
 b. break points
 break <linenum> thread <threadno>, break *address, b xxx
