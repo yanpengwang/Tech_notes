@@ -102,3 +102,33 @@ The simplest python code of others, which I liked very much:
                 result += c
         return result
         
+10. GDB daily use
+gcc(g++) -ggdb3 -o execfilename srcfile.c(srcfile.cpp); gdb execfilename
+a. source code browsing
+list <linenum>, list <filename:linenum> 
+list <function>, list <filename:function>
+set listsize <count>
+search <regexp>, reverse-search <regexp>
+info line <linenum>
+info line <filename:function>
+disassemble
+
+b. break points
+break <linenum> thread <threadno>, break *address, b xxx
+info b, i b
+clear <filename:linenum> , d [range]
+
+c. debugging
+continue/c, s, n
+s/n
+
+d. run time value check
+print /<f> <expr>
+examine/<n/f/u>  <addr> 
+display/<fmt> <expr> # set auto display
+bt, info f, info locals
+f <n>, info r, thread <threadno>
+
+
+
+
