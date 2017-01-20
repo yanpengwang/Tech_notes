@@ -134,3 +134,6 @@ f <n>, info r, thread <threadno>
 >>sum([x for x in range ( 1 , 100 ) if not [y for y in range ( 2 ,int(math.sqrt(x))+1) if x % y == 0 ]])
 >>1061
 
+12. use awk to print the same first column in two files:
+awk -F, 'BEGIN{aa[0]=1} {if (FILENAME=="a")  aa[$1]=$2; else if (FILENAME=="b" && aa[$1]) print $1} ' a b
+
