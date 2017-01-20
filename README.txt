@@ -129,6 +129,8 @@ display/<fmt> <expr> # set auto display
 bt, info f, info locals
 f <n>, info r, thread <threadno>
 
-
-
+11. return the sum of Primes within 100
+>>import math
+>>sum([x for x in range ( 1 , 100 ) if not [y for y in range ( 2 ,int(math.sqrt(x))+1) if x % y == 0 ]])
+>>1061
 
