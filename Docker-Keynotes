@@ -1,0 +1,52 @@
+# Docker-Keynotes, created on 2015.08.01
+
+1. Check if docker is correctly installed.
+docker run hello-world
+
+2. add yourlogin into docker group to avoid call sudo  to run docker cmds.
+sudo usermod -aG docker $yourlogin
+
+3. hello world.
+docker run ubuntu:14.04 /bin/echo 'Hello world'
+
+4. play within ubuntu container/image.
+docker run -t -i ubuntu:14.04 /bin/bash
+
+5. A daemonized Hello world.
+docker run -d ubuntu:14.04 /bin/sh -c "while true; do echo hello world; sleep 1; done"
+docker ps # find the daemon
+docker logs thirsty_brown # thirsty_brown is the container name docker assigned
+docker stop thirsty_brown # stop it
+ 
+6. Get docker version
+docker version
+
+7. running a web application in Docker
+docker run -d -P training/webapp python app.py
+http://localhost:49153/
+docker port nostalgic_morse 5000
+docker logs -f dreamy_hawking
+docker top dreamy_hawking 
+docker inspect dreamy_hawking
+docker inspect -f '{{ .NetworkSettings.IPAddress }}' dreamy_hawking
+docker rm dreamy_hawking
+
+8. 
+docker images
+docker pull centos
+9. Updating and committing an image
+docker run -t -i training/sinatra /bin/bash
+root@af9a318d2699:/# gem install json
+docker commit -m "Added json gem" -a "yanpeng wang" af9a318d2699  ouruser/sinatra:v2
+
+10. Build image from a Dockerfile 
+docker build -t yanpeng/sinatra:v2 .
+
+11. docker push
+docker push wangyanpeng/testimg
+
+12. remove image
+docker rmi d4157a5a5066
+
+
+
