@@ -1,0 +1,22 @@
+Thinking-in-software-development
+================================
+
+Summarize my idea during daily working
+
+1. A software product's quality is determined by tester or developer?
+2. For random issue, the best time for developers to check is NOW.
+3. Any random issue we couldn't reproduced will be reproduced by our customers.
+4. do right thing then do thing right
+5. Any policy and process is made by people. Don't be surprised if you see exceptions.
+6. Solve problems instead of blaming and pointing fingers
+7. Leave politics to the politicians
+8. Less is more
+   Solve 100% of one problem rather than 50% of two
+   Users prefer one great feature instead of two partiallycompleted features
+9. Not “here is a bug report”, Instead “here is the bug; here is the code fix; here is the test that verifies the fix” 
+10. Make Tradeoffs Explicit. Every decision is a tradeoff: X or Y or Z . When you choose features and a date, you implicitly choose a level of quality. Be honest with yourself and your team when you are doing above.
+11. Manage Technical Debt. Plan for how and when you will pay it off. Maintain sustainable and well-understood level of debt.
+12. Respect People. 
+    People are not interchangeable. Different skills, interests, capabilitiesDifferent skills, interests, capabilities. Create a Symphony, not a Factory. Most valuable and irreplaceable asset. Treat people with care and respect. If the company values its people, people will provide value to the company.
+13. Clear “contract” between teams. Functionality: agreed-upon scope of responsibility.   
+14. Software is grown, not built - Bill de hÓra
