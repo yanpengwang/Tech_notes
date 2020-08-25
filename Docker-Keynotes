@@ -1,5 +1,7 @@
 # Docker-Keynotes, created on 2015.08.01
 
+0. Disable selinux  
+
 1. Check if docker is correctly installed.
 docker run hello-world
 
